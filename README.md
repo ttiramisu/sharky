@@ -17,11 +17,19 @@
 example:
 - yaml (content)
   ```yaml
-  text_row: |
-    ['john', 'peter', 'susan']
+    - text_row:
+      - class: ''
+      - items:
+        - john
+        - peter
+        - susan
 
-  img_row: |
-    [../assets/icon.jpg', '../assets/icon.jpg', '../assets/icon.jpg']
+    - img_row: 
+      - class: ''
+      - items:
+        - ../assets/icon.jpg
+        - ../assets/icon.jpg
+        - ../assets/icon.jpg
   ```
 
 
