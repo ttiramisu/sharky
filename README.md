@@ -16,7 +16,7 @@
   python3 dev.py
   ```
   in the base folder of the project
-- the result can be seen in [localhost:6767](localhost:6767) or [http://127.0.0.1:6767/](http://127.0.0.1:6767/)
+- the result can be seen in [https://localhost:6767](https://localhost:6767) or [http://127.0.0.1:6767/](http://127.0.0.1:6767/)
 
 ## production
 
