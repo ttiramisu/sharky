@@ -1,8 +1,13 @@
 import yaml
+import os
+import shutil
+
 from utils.maker import write_html, generate_html
 from utils.structure import add_components_nav_footer
-
 from utils.contents import make_final_content
+
+SRC_ASSETS = "assets"
+DEST_ASSETS = "dist/assets"
 
 def config():
     with open('CONTENTS/CONFIG.yaml', 'r') as file:
@@ -16,6 +21,11 @@ def open_contents_file():
     return data
 
 def main():
+    if os.path.exists(DEST_ASSETS):
+        shutil.rmtree(DEST_ASSETS)
+    
+    shutil.copytree(SRC_ASSETS, DEST_ASSETS)
+
     config_data = config()
 
     ''' Process the contents file '''

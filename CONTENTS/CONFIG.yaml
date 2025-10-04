@@ -1,4 +1,4 @@
 language: en
 website-name: Lorem Ipsium
-website-icon: ../assets/icon.jpg
+website-icon: /assets/icon.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
