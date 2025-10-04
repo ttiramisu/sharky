@@ -4,7 +4,8 @@
 
 - clone the github repo
 - open the `/CONTENTS` folder
-- edit the `/assets/` folder for assets
+- edit the `/src/assets` folder for assets
+- edit the `/src/css/stlye.css` for custom css
 - edit the `CONFIG.yaml` file for congifuration updates
 - edit the `NAVIGATION.yaml` file for editing the navigation
 - edit the `CONTENTS.yaml` file for editing the contents (work in progress)
@@ -34,7 +35,7 @@ example:
 
   ```yaml
   - text_row:
-      - class: ""
+      - class: "haiya"
       - items:
           - lorem
           - ipsium
@@ -53,9 +54,9 @@ example:
   ```html
   <div class="container text-center">
     <div class="row">
-      <div class="col">lorem</div>
-      <div class="col">ipsium</div>
-      <div class="col">dolor</div>
+      <div class="col haiya">lorem</div>
+      <div class="col haiya">ipsium</div>
+      <div class="col haiya">dolor</div>
     </div>
   </div>
 

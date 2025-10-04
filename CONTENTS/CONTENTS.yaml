@@ -1,5 +1,5 @@
 - text_row:
-  - class: ''
+  - class: 'johnny'
   - items:
     - john
     - peter
@@ -22,9 +22,9 @@
 - img_row: 
   - class: ''
   - items:
-    - /assets/icon.jpg
-    - /assets/icon.jpg
-    - /assets/icon.jpg
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
 
 - spacing: 50
 
@@ -33,7 +33,7 @@
   - title: lorem ipsum
   - text: |
       lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  - img : /assets/icon.jpg
+  - img : src/assets/icon.jpg
   - img_position : left
 
 - spacing: 50
@@ -45,5 +45,5 @@
   - title: lorem ipsum
   - text: |
       lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  - img : /assets/icon.jpg
+  - img : src/assets/icon.jpg
   - img_position : right

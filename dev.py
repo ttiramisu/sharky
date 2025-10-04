@@ -10,6 +10,7 @@ WATCHED_FILES = [
     os.path.join(ROOT_DIR, "CONTENTS/CONTENTS.yaml"),
     os.path.join(ROOT_DIR, "CONTENTS/CONFIG.yaml"),
     os.path.join(ROOT_DIR, "CONTENTS/NAVIGATION.yaml"),
+    os.path.join(ROOT_DIR, "src/css/style.css"),
     os.path.join(ROOT_DIR, "utils/contents.py"),
 ]
 
@@ -43,11 +44,11 @@ def watch():
     return changed
 
 def watch_loop():
-    build()  # initial build
+    build()
     while True:
         if watch():
             build()
-        time.sleep(1)  # 1-second polling
+        time.sleep(1)
 
 class LiveReloadHandler(SimpleHTTPRequestHandler):
     def do_GET(self):

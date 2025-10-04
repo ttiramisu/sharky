@@ -16,12 +16,11 @@ def make_final_content():
 
     for block in contents:
         if "text_row" in block:
-            # Extract class and items from the list
             row_list = block['text_row']
-            cls = row_list[0].get('class', '')       # first dict is class
-            items = row_list[1].get('items', [])     # second dict is items
+            cls = row_list[0].get('class', '')
+            items = row_list[1].get('items', [])
 
-            row_items = "".join(f'<div class="col">{item}</div>' for item in items)
+            row_items = "".join(f'<div class="col {cls}">{item}</div>' for item in items)
             final_content += row.format(row_items=row_items)
 
         elif "img_row" in block:
@@ -29,7 +28,7 @@ def make_final_content():
             cls = row_list[0].get('class', '')
             items = row_list[1].get('items', [])
 
-            row_items = "".join(f'<div class="col"><img src="{item}" alt="{item}" class="img-fluid"></div>' for item in items)
+            row_items = "".join(f'<div class="col {cls}"><img src="{item}" alt="{item}" class="img-fluid"></div>' for item in items)
             final_content += row.format(row_items=row_items)
 
         elif "two-col" in block:

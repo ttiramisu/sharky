@@ -22,6 +22,7 @@ def generate_html(config, HEADER, content, FOOTER):
         <meta name="description" content="{html.escape(config.get('description', ''))}">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{html.escape(config.get('custom_css', ''))}" rel="stylesheet">
     </head>
     <body>
         {HEADER}

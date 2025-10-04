@@ -6,8 +6,8 @@ from utils.maker import write_html, generate_html
 from utils.structure import add_components_nav_footer
 from utils.contents import make_final_content
 
-SRC_ASSETS = "assets"
-DEST_ASSETS = "dist/assets"
+SRC_ASSETS = "src"
+DEST_ASSETS = "dist/src"
 
 def config():
     with open('CONTENTS/CONFIG.yaml', 'r') as file:
