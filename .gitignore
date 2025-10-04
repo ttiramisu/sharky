@@ -6,6 +6,7 @@ __pycache__/
 # Distribution / build output
 dist/
 build/
+assets/
 *.egg-info/
 
 # Virtual environment
