@@ -1,5 +1,14 @@
-some_content: |
-  this is a multi lined
-  content
+text_row: |
+  ['john', 'peter', 'susan']
+
+img_row: |
+  [../assets/icon.jpg', '../assets/icon.jpg', '../assets/icon.jpg']
+
+2-col:
+  - text: |
+      ### This is a title
+      This is some text
+  - img : |
+      [../assets/icon.jpg']
 
 example_image: "path/to/image"

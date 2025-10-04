@@ -1,7 +1,8 @@
 import yaml
-from utils.process import process
 from utils.maker import write_html, generate_html
 from utils.structure import add_components_nav_footer
+
+from utils.contents import make_final_content
 
 def config():
     with open('CONTENTS/CONFIG.yaml', 'r') as file:
@@ -18,7 +19,7 @@ def main():
     config_data = config()
 
     ''' Process the contents file '''
-    content = open_contents_file()
+    content = make_final_content()
     # process(content)
 
     ''' Make the html file '''

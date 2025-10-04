@@ -1,3 +1,7 @@
+'''
+this file defines the footer component
+'''
+
 from datetime import datetime
 year = datetime.now().year
 

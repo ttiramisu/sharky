@@ -8,14 +8,8 @@ Currently includes:
 
 import yaml
 
-from lib.header import nav
-from lib.footer import footer
-
-def preload_files():
-    with open('./CONTENTS/CONTENTS.yaml', 'r') as file:
-        contents = yaml.safe_load(file)
-    
-    return contents
+from utils.components.header import nav
+from utils.components.footer import footer
 
 def add_components_nav_footer():
     '''
@@ -25,11 +19,11 @@ def add_components_nav_footer():
     with open('./CONTENTS/NAVIGATION.yaml', 'r') as file:
         nav_data = yaml.safe_load(file)
 
-    for key, value in nav_data.items():
+    for key in nav_data.items():
         if 'nav_title' in key:
             nav_title = nav_data['nav_title']
             nav_items = ''
-            for item in nav_data['nav'].strip().strip('\n').strip('[]').replace("'", "").split(','):
+            for item in nav_data['nav'].strip('\n').strip('[]').replace("'", "").split(','):
                 nav_items += f'<li class="nav-item"><a class="nav-link" href="#{item.strip()}">{item.strip()}</a></li>'
             
             nav_html = nav.format(nav_title=nav_title, nav_items=nav_items)
