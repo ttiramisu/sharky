@@ -1,0 +1,5 @@
+some_content: |
+  this is a multi lined
+  content
+
+example_image: "path/to/image"

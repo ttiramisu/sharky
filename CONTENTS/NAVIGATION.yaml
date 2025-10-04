@@ -1,0 +1,3 @@
+nav_title: title
+nav: |
+  ['home', 'about', 'projects', 'resume']
