@@ -7,11 +7,45 @@ Currently includes:
 """
 
 import yaml
-
 from utils.components.header import nav
+from utils.components.footer import footer
+
+def make_footer():
+    with open('./CONTENTS/NAVIGATION.yaml', 'r') as file:
+        footer_data = yaml.safe_load(file)
+
+    nav_title = footer_data.get('nav_title', '')
+    logo = footer_data.get('logo', '')
+
+    nav_items_list, nav_ids_list = [], []
+    for entry in footer_data.get('nav', []):
+        if 'items' in entry:
+            nav_items_list = entry['items']
+        if 'ids' in entry:
+            nav_ids_list = entry['ids']
+
+    footer_items_html = ''
+    for item, id_ in zip(nav_items_list, nav_ids_list):
+        if isinstance(item, dict) and isinstance(id_, dict):
+            parent_item, sub_items = list(item.items())[0]
+            parent_id, sub_ids = list(id_.items())[0]
+
+            # footer_items_html += f'<li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#{parent_id}">{parent_item}</a></li>'
+
+            for sub_item, sub_id in zip(sub_items, sub_ids):
+                holder = f'{parent_item} > {sub_item}'
+                footer_items_html += f'<li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#{sub_id}">{holder}</a></li>'
+        else:
+            footer_items_html += f'<li class="nav-item"><a class="nav-link px-2 text-body-secondary" href="#{id_}">{item}</a></li>'
+
+    logo_html = f'<img src="{logo}" alt="logo" width="40" height="40" class="d-inline-block align-text-top me-2">' if logo else ''
+
+    footer_html = footer.format(nav_title=nav_title,
+                          nav_items=footer_items_html, nav_img=logo_html)
+
+    return footer_html
 
 def make_nav():
-
     with open('./CONTENTS/NAVIGATION.yaml', 'r') as file:
         nav_data = yaml.safe_load(file)
 

@@ -27,7 +27,10 @@ def hero_maker(block):
     """
     Takes a hero block from YAML and routes it to the correct hero component.
     Buttons with empty text are removed entirely.
+    Images with no value are also removed.
     """
+    import re
+    from collections import defaultdict
 
     # Flatten YAML list-of-dicts into a single dict
     hero_data = {}
@@ -50,18 +53,24 @@ def hero_maker(block):
     # Work on a copy of the template
     hero_html = hero_map[hero_type]
 
-    # Remove buttons entirely if text is empty
+    # 🔹 Remove <img> tags if the image data is empty
+    for img in ["primary", "secondary"]:
+        img_key = f"img_{img}"
+        img_id_key = f"img_{img}_id"
+        if not hero_data.get(img_key):
+            pattern = rf'<img[^>]*{img_id_key}[^>]*>'
+            hero_html = re.sub(pattern, '', hero_html, flags=re.DOTALL)
+
+    # 🔹 Remove buttons entirely if text is empty
     for btn in ["primary", "secondary"]:
         btn_key = f"btn_{btn}"
         btn_id_key = f"btn_{btn}_id"
         if not hero_data.get(btn_key):
-            # Remove the entire <a ...>...</a> tag for this button
             pattern = rf'<a[^>]*{btn_id_key}[^>]*>.*?</a>'
             hero_html = re.sub(pattern, '', hero_html, flags=re.DOTALL)
 
     # Format remaining placeholders safely
     return hero_html.format_map(defaultdict(str, hero_data))
-
 
 def make_final_content():
     global final_content

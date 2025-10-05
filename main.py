@@ -3,7 +3,7 @@ import os
 import shutil
 
 from utils.maker import write_html, generate_html
-from utils.structure import make_nav
+from utils.structure import make_nav, make_footer
 from utils.contents import make_final_content
 
 SRC_ASSETS = "src"
@@ -27,7 +27,8 @@ def main():
 
     ''' Make the html file '''
     nav_content = make_nav()
-    website_data = generate_html(config_data, nav_content, content, 'h')
+    footer_content = make_footer()
+    website_data = generate_html(config_data, nav_content, content, footer_content)
     write_html(website_data)
 
 if __name__ == "__main__":
