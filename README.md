@@ -123,13 +123,22 @@ sharky/
 3. Open ```CONTENTS/CONFIG.yaml``` and define your global website settings.
 4. Required Fields:
 
-| Field          | Description                                    | Example                                                    |
-| -------------- | ---------------------------------------------- | ---------------------------------------------------------- |
-| `language`     | Website language (ISO code)                    | `en`                                                       |
-| `website-name` | The name of your website                       | `Lorem Ipsium`                                             |
-| `website-icon` | Path to the site icon                          | `src/assets/icon.jpg`                                      |
-| `description`  | Meta description for SEO                       | `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` |
-| `custom_css`   | Optional path to a CSS file for custom styling | `src/css/style.css`                                        |
+| Field          | Description                                    |
+| -------------- | ---------------------------------------------- |
+| `language`     | Website language (ISO code)                    |
+| `website-name` | The name of your website                       |
+| `website-icon` | Path to the site icon                          |
+| `description`  | Meta description for SEO                       |
+| `custom_css`   | Optional path to a CSS file for custom styling |
+
+Eample:
+```yaml
+language: en
+website-name: Lorem Ipsium
+website-icon: src/assets/icon.jpg
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+custom_css: src/css/style.css
+```
 
 5. Open ```CONTENTS/NAVIGATION.yaml``` and define your website’s navigation menu, including nested items and IDs for links.
 6. Required Fields:
