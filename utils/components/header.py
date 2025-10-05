@@ -6,12 +6,14 @@ This file defines the header component
 
 nav_title = "{nav_title}"
 nav_items = "{nav_items}"
+nav_img = "{nav_img}"
 
 nav = '''
 <div class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand d-flex justify-space-between" href="#">
+          {nav_img}
           {nav_title}
         </a>
         <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

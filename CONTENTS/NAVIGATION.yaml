@@ -1,12 +1,19 @@
 nav_title: nav example
+logo: src/assets/icon.jpg
 nav:
   - items:
-    - nav1
+    - nav1:
+      - sub1
+      - sub2
+      - sub3
     - nav2
     - nav3
     - nav4
   - ids:
-    - lorem-right
-    - peter
+    - nav1:
+      - sub1
+      - sub2
+      - sub3
+    - nav2
     - susan
     - shelia
