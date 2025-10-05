@@ -1,4 +1,5 @@
-# use yaml to template your websites
+# sharky
+websites made easy
 
 ## how to use
 
@@ -77,6 +78,7 @@ example:
 
 ## current components
 
+- 4 hero layouts
 - simple navbar
 - simple footer
 - text/img rows
