@@ -85,6 +85,8 @@ example:
 - 2 column layouts (img left/img right)
 - spacing
 - nav scroll to
+- jumbotron
+- image carousel
 
 ## note:
 
