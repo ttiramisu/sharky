@@ -1,5 +1,7 @@
 '''
-this file defines the header component
+utils/components/header.py
+
+This file defines the header component
 '''
 
 nav_title = "{nav_title}"

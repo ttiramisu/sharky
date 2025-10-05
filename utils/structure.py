@@ -3,7 +3,7 @@ utils/structure.py
 
 This module provides helper functions for reading components and generating corresponding html.
 Currently includes:
-- reading components header to replace with actual components
+- reading components header and footer to replace with actual components
 """
 
 import yaml

@@ -1,5 +1,7 @@
 '''
-this file defines the row component
+utils/components/row.py
+
+This file defines the row component
 '''
 
 row_items = "{row_items}"

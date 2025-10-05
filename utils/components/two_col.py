@@ -1,3 +1,9 @@
+"""
+utils/components/two_col.py
+
+This module provides helper functions for adding the two column layout
+"""
+
 img = "{img}"
 title = "{title}"
 content = "{content}"

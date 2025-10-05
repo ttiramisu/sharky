@@ -1,5 +1,7 @@
 '''
-this file defines the footer component
+utils/components/footer.py
+
+This file defines the footer component
 '''
 
 from datetime import datetime

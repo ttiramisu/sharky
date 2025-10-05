@@ -1,3 +1,9 @@
+'''
+utils/contents.py
+
+This module provides the function to read the CONTENTS.yaml file and process them into actual html
+'''
+
 import yaml
 from utils.components.row import row
 from utils.components.two_col import two_col_img_left as two_col_left
@@ -10,6 +16,7 @@ final_content = ''
 with open('./CONTENTS/CONTENTS.yaml', 'r') as file:
     contents = yaml.safe_load(file)
 
+
 def make_final_content():
     global final_content
     final_content = ''
@@ -20,7 +27,8 @@ def make_final_content():
             cls = row_list[0].get('class', '')
             items = row_list[1].get('items', [])
 
-            row_items = "".join(f'<div class="col {cls}">{item}</div>' for item in items)
+            row_items = "".join(
+                f'<div class="col {cls}">{item}</div>' for item in items)
             final_content += row.format(row_items=row_items)
 
         elif "img_row" in block:
@@ -28,7 +36,8 @@ def make_final_content():
             cls = row_list[0].get('class', '')
             items = row_list[1].get('items', [])
 
-            row_items = "".join(f'<div class="col {cls}"><img src="{item}" alt="{item}" class="img-fluid"></div>' for item in items)
+            row_items = "".join(
+                f'<div class="col {cls}"><img src="{item}" alt="{item}" class="img-fluid"></div>' for item in items)
             final_content += row.format(row_items=row_items)
 
         elif "two-col" in block:
@@ -43,9 +52,11 @@ def make_final_content():
                 elif 'img' in item:
                     img = item['img']
             if leftright == 'left':
-                final_content += two_col_left.format(img=img, title=title, content=text)
+                final_content += two_col_left.format(
+                    img=img, title=title, content=text)
             else:
-                final_content += two_col_right.format(img=img, title=title, content=text)
+                final_content += two_col_right.format(
+                    img=img, title=title, content=text)
 
         elif "spacing" in block:
             number = block["spacing"]
