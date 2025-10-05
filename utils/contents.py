@@ -18,10 +18,17 @@ from utils.helper.scrollto import scroll_to_id as st_id
 # HERO COMPONENTS
 from utils.components.hero import centered_hero, centered_screenshot, text_left_img_right, border_crop_img
 
+# JUMBOTRON COMPONENTS
+from utils.components.jumbo import basic, full_width
+
+# CAROUSEL COMPONENTS
+from utils.components.carousel import carousel, first_frame, other_frame
+
 final_content = ''
 
 with open('./CONTENTS/CONTENTS.yaml', 'r') as file:
     contents = yaml.safe_load(file)
+
 
 def hero_maker(block):
     """
@@ -71,6 +78,31 @@ def hero_maker(block):
 
     # Format remaining placeholders safely
     return hero_html.format_map(defaultdict(str, hero_data))
+
+
+def jumbotron_maker(block):
+    """
+    Takes a jumbotron block from YAML and generates the HTML
+    based on its type.
+    """
+
+    jumbotron_map = {
+        "basic": basic,
+        "full_width": full_width,
+    }
+
+    jumbo_data = {}
+    for item in block.get("jumbo", []):
+        if isinstance(item, dict):
+            jumbo_data.update(item)
+
+    jumbo_type = jumbo_data.get("type", "basic").lower()
+    jumbotron_html = jumbotron_map.get(jumbo_type)
+
+    if not jumbotron_map:
+        return f"<!-- Unknown jumbotron type: {jumbo_type} -->"
+
+    return jumbotron_html.format_map(defaultdict(str, jumbo_data))
 
 def make_final_content():
     global final_content
@@ -123,5 +155,29 @@ def make_final_content():
 
         elif "hero" in block:
             final_content += hero_maker(block)
+
+        elif "jumbo" in block:
+            final_content += jumbotron_maker(block)
+
+        elif "carousel" in block:
+            carousel_html = ''
+            carousel_data_list = block['carousel']
+            carousel_data = {}
+
+            for item in carousel_data_list:
+                if isinstance(item, dict):
+                    carousel_data.update(item)
+
+            width = carousel_data.get('width', '')
+            height = carousel_data.get('height', '')
+
+            carousel_img_list = carousel_data.get('content', [])
+
+            carousel_html += first_frame.format(img_src=carousel_img_list[0], img_width=width, img_height=height)
+
+            for img_src in carousel_img_list[1:]:
+                carousel_html += other_frame.format(img_src=img_src, img_width=width, img_height=height)
+
+            final_content += carousel.format(carousel_items=carousel_html, img_width=width, img_height=height)
 
     return final_content
