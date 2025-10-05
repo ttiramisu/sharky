@@ -1,6 +1,17 @@
 # sharky
 A dynamic content-driven web project featuring customizable hero sections, two-column layouts, image and text rows, carousels, and more. The project uses a YAML-based configuration to define page elements, enabling rapid updates and modular content management.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Customization](#customization)
+- [License](#license)
+
+
 ## overview
 This project allows you to build modern, responsive web pages using predefined content blocks defined in YAML. Each block represents a UI component, such as a hero section, text block, image row, carousel, or jumbo section. By editing the YAML, you can easily update page content without touching the HTML.
 
@@ -57,6 +68,11 @@ This project allows you to build modern, responsive web pages using predefined c
     python3 dev.py
     ```
 4. Open ```localhost:6767``` in your browser to view your project.
+
+5. To build the project for hosting
+    ```bash
+    python3 main.py
+    ```
 
 ## Project Structure
 
