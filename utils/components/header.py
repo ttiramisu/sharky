@@ -7,7 +7,7 @@ This file defines the header component
 nav_title = "{nav_title}"
 nav_items = "{nav_items}"
 
-nav = f'''
+nav = '''
 <div class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
       <div class="container">

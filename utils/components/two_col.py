@@ -8,7 +8,7 @@ img = "{img}"
 title = "{title}"
 content = "{content}"
 
-two_col_img_left = f'''
+two_col_img_left = '''
 <div class="container mb-5">
   <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
     <div class="container col-12 col-lg-6 col-xl-5 justify-content-end">
