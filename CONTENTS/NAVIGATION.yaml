@@ -1,21 +1,13 @@
-nav_title: nav example
+nav_title: nav
 logo: src/assets/icon.jpg
 nav:
   - items:
-    - nav1:
-      - sub1
-      - sub2
-      - sub3
-      - sub4
+    - nav1
     - nav2
     - nav3
     - nav4
   - ids:
-    - nav1:
-      - sub1
-      - sub2
-      - sub3
-      - sub4
+    - nav1
     - nav2
     - nav3
     - nav4

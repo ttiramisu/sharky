@@ -1,0 +1,34 @@
+- hero:
+  - type: border_crop_img
+  - img: src/assets/icon.jpg
+  - img_width: 700
+  - img_height: 500
+  - title: Lorem Ipsium
+  - text: |
+      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - btn_primary: Primary Button
+  - btn_secondary:
+
+  - btn_primary_id: lorem-right
+  - btn_secondary_id:
+
+- spacing: 150
+
+- scroll_to: lorem-right
+- two-col:
+  - class: ''
+  - title: lorem ipsum
+  - text: |
+      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - img : src/assets/icon.jpg
+  - img_position : left
+
+- spacing: 50
+
+- carousel:
+  - content:
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+  - width: 800
+  - height: 400
