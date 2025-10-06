@@ -1,3 +1,10 @@
+'''
+utils/components/carousel.py
+
+This file defines the carousel component
+'''
+
+
 carousel_items = "{carousel_items}"
 img_src = "{img_src}"
 

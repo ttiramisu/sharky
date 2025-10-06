@@ -105,6 +105,10 @@ def jumbotron_maker(block):
     return jumbotron_html.format_map(defaultdict(str, jumbo_data))
 
 def make_final_content():
+    """
+    Makes the content html in order of the CONTENTS.yaml file
+    """
+
     global final_content
     final_content = ''
 

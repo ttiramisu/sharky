@@ -11,6 +11,10 @@ from utils.components.header import nav
 from utils.components.footer import footer
 
 def make_footer():
+    """
+    make the footer based on NAVIGATION.yaml
+    """
+
     with open('./CONTENTS/NAVIGATION.yaml', 'r') as file:
         footer_data = yaml.safe_load(file)
 
@@ -46,6 +50,10 @@ def make_footer():
     return footer_html
 
 def make_nav():
+    """
+    make the navigation based on NAVIGATION.yaml
+    """
+
     with open('./CONTENTS/NAVIGATION.yaml', 'r') as file:
         nav_data = yaml.safe_load(file)
 

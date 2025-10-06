@@ -1,3 +1,9 @@
+'''
+utils/components/jumbo.py
+
+This file defines the jumbotron component
+'''
+
 title = '{title}'
 text = '{text}'
 

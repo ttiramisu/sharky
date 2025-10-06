@@ -12,7 +12,7 @@ A dynamic content-driven web project featuring customizable hero sections, two-c
 - [License](#license)
 
 
-## overview
+## Overview
 This project allows you to build modern, responsive web pages using predefined content blocks defined in YAML. Each block represents a UI component, such as a hero section, text block, image row, carousel, or jumbo section. By editing the YAML, you can easily update page content without touching the HTML.
 
 ## Features
@@ -95,8 +95,8 @@ sharky/
 │  └─ components/        # defines all components
 │  └─ helper/            # defines all helper components
 │  └─ contents.py        # generates the contents in the final file
-│  └─ maker.html         # defines and generates the html frame
-│  └─ structure.html     # generates the navbar and footer of the final file
+│  └─ maker.py           # defines and generates the html frame
+│  └─ structure.py       # generates the navbar and footer of the final file
 │
 ├─ dev.py
 ├─ main.py
@@ -197,6 +197,23 @@ To ensure each block renders properly, the following fields must be in your YAML
 - ```btn_primary_id``` → ID for primary button (used for scroll or JS actions)
 - ```btn_secondary_id``` → ID for secondary button
 
+Example:
+```yaml
+- hero:
+  - type: centered_hero
+  - img: src/assets/icon.jpg
+  - img_width: 57
+  - img_height: 500
+  - title: Lorem Ipsium
+  - text: |
+      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - btn_primary: Primary Button
+  - btn_secondary: 
+  
+  - btn_primary_id: lorem-right
+  - btn_secondary_id: 
+```
+
 ### 2. Two-Column Layout (two-col)
 
 #### - Required Fields:
@@ -210,6 +227,17 @@ To ensure each block renders properly, the following fields must be in your YAML
 
 - ```class``` → CSS class for styling
 
+Example:
+```yaml
+- two-col:
+  - class: ''
+  - title: lorem ipsum
+  - text: |
+      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - img : src/assets/icon.jpg
+  - img_position : left
+```
+
 ### 3. Jumbo Section (jumbo)
 
 #### - Required Fields:
@@ -217,6 +245,15 @@ To ensure each block renders properly, the following fields must be in your YAML
 - ```type``` → basic or full_width
 - ```title``` → Heading text
 - ```text``` → Paragraph text
+
+Example:
+```yaml
+- jumbo:
+  - type: full_width 
+  - title: lorem ipsum
+  - text: |
+      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
 
 ### 4. Text Row (text_row)
 
@@ -226,6 +263,16 @@ To ensure each block renders properly, the following fields must be in your YAML
 #### - Optional Fields:
 - ```class``` → CSS class for styling
 
+Example:
+```yaml
+- text_row:
+  - class: 'johnny'
+  - items:
+    - john
+    - peter
+    - susan
+```
+
 ### 5. Image Row (img_row)
 
 #### - Required Fields:
@@ -233,6 +280,16 @@ To ensure each block renders properly, the following fields must be in your YAML
 
 #### - Optional Fields:
 - ```class``` → CSS class for styling
+
+Example:
+```yaml
+- img_row: 
+  - class: ''
+  - items:
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+```
 
 ### 6. Carousel (carousel)
 
@@ -242,15 +299,36 @@ To ensure each block renders properly, the following fields must be in your YAML
 - ```width``` → Carousel width in pixels
 - ```height``` → Carousel height in pixels
 
+Example:
+```yaml
+- carousel:
+  - content:
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+    - src/assets/icon.jpg
+  - width: 500
+  - height: 100
+```
+
 ### 7. Spacing (spacing)
 
 #### - Required Fields:
 - ```spacing``` → Represents spacing between sections in pixels
 
+Example:
+```yaml
+- spacing: 50
+```
+
 ### 8. Scroll Target (scroll_to)
 
 #### - Required Fields:
 - ```scroll_to``` → ID of the element you want to scroll to (must match a btn_primary_id, btn_secondary_id or a ids in NAVIGATION.yaml)
+
+Example:
+```yaml
+- scroll_to: lorem-right
+```
 
 ## Customization
 - Update hero images, titles, and buttons directly in YAML.

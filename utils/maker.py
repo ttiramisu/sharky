@@ -11,6 +11,10 @@ import html
 import os
 
 def generate_html(config, HEADER, content, FOOTER):
+    """
+    Defines and append values inside of final html file
+    """
+
     html_template = f"""
     <!DOCTYPE html>
     <html lang="{html.escape(config.get('language', 'en'))}">
@@ -35,6 +39,10 @@ def generate_html(config, HEADER, content, FOOTER):
     return html_template
 
 def write_html(data):
+    """
+    write output to /dist folder
+    """
+
     os.makedirs('dist', exist_ok=True)
     file_path = os.path.join('dist', 'index.html')
     with open(file_path, 'w') as file:
