@@ -1,0 +1,20 @@
+nav_title: Lorem Ipsium
+logo: web/assets/icon.jpg
+items:
+  - label: Home
+    href: index.html
+  - label: Home Sections
+    href: index.html#highlights
+    children:
+      - label: Highlights
+        href: index.html#highlights
+      - label: Story
+        href: index.html#story
+      - label: Gallery
+        href: index.html#gallery
+      - label: Testimonials
+        href: index.html#testimonials
+  - label: Contact
+    href: contact.html
+  - label: About
+    href: about.html

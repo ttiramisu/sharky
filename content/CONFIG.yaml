@@ -1,0 +1,15 @@
+language: en
+website-name: Lorem Ipsium
+website-icon: web/assets/icon.jpg
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+custom_css: web/css/style.css
+pages:
+  - output: index.html
+    title: Lorem Ipsium - Home
+    content: CONTENTS.yaml
+  - output: about.html
+    title: Lorem Ipsium - About
+    content: pages/about.yaml
+  - output: contact.html
+    title: Lorem Ipsium - Contact
+    content: pages/contact.yaml

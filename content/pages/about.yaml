@@ -1,0 +1,55 @@
+- block: scroll_to
+  id: about-top
+
+- block: hero
+  type: centered_screenshot
+  img: web/assets/icon.jpg
+  img_width: 860
+  img_height: 360
+  title: About Lorem Ipsium
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.
+  btn_primary: View Story
+  btn_secondary: Contact Us
+  btn_primary_id: about-story
+  btn_secondary_id: contact-cta
+
+- block: spacing
+  value: 60
+
+- block: scroll_to
+  id: about-story
+- block: two-col
+  class: ''
+  title: Our story
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.
+  img: web/assets/icon.jpg
+  img_position: left
+
+- block: spacing
+  value: 40
+
+- block: jumbo
+  type: basic
+  title: Mission and values
+  text: |
+    Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+- block: spacing
+  value: 60
+
+- block: scroll_to
+  id: contact-cta
+- block: hero
+  type: border_crop_img
+  img: web/assets/icon.jpg
+  img_width: 520
+  img_height: 320
+  title: Ready to collaborate
+  text: |
+    Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  btn_primary: Back to top
+  btn_secondary:
+  btn_primary_id: about-top
+  btn_secondary_id:

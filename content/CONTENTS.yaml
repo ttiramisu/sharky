@@ -1,0 +1,142 @@
+- block: scroll_to
+  id: home
+
+- block: hero
+  type: centered_hero
+  img: web/assets/icon.jpg
+  img_width: 180
+  img_height: 180
+  title: Lorem Ipsium Demo Landing
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  btn_primary: Explore Sections
+  btn_secondary: Contact Demo
+  btn_primary_id: highlights
+  btn_secondary_id: contact
+
+- block: spacing
+  value: 60
+
+- block: scroll_to
+  id: highlights
+- block: text_row
+  class: demo-pill
+  items:
+    - Lorem ipsum dolor sit amet
+    - Consectetur adipiscing elit
+    - Sed do eiusmod tempor incididunt
+    - Ut labore et dolore magna aliqua
+
+- block: stats
+  items:
+    - value: 120K+
+      label: Lorem readers
+    - value: 48
+      label: Demo sections published
+    - value: 99.9%
+      label: Ipsum uptime
+
+- block: spacing
+  value: 70
+
+- block: scroll_to
+  id: story
+- block: two-col
+  class: ''
+  title: Built for content-first workflows
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.
+  img: web/assets/icon.jpg
+  img_position: left
+
+- block: spacing
+  value: 50
+
+- block: two-col
+  class: ''
+  title: Flexible block-based composition
+  text: |
+    Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+  img: web/assets/icon.jpg
+  img_position: right
+
+- block: spacing
+  value: 70
+
+- block: scroll_to
+  id: gallery
+- block: img_row
+  class: demo-image
+  items:
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+
+- block: spacing
+  value: 30
+
+- block: carousel
+  content:
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+    - web/assets/icon.jpg
+  width: 960
+  height: 420
+
+- block: spacing
+  value: 70
+
+- block: scroll_to
+  id: testimonials
+- block: jumbo
+  type: basic
+  title: Trusted by Lorem Teams
+  text: |
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis."
+    "Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+
+- block: quote
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
+  author: Lorem Customer
+
+- block: spacing
+  value: 40
+
+- block: jumbo
+  type: full_width
+  title: Showcase every section in minutes
+  text: |
+    Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+- block: divider
+
+- block: spacing
+  value: 70
+
+- block: scroll_to
+  id: contact
+- block: cta
+  title: Start your Lorem project today
+  text: |
+    Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+  button: View contact page
+  href: contact.html
+
+- block: spacing
+  value: 40
+
+- block: hero
+  type: border_crop_img
+  img: web/assets/icon.jpg
+  img_width: 560
+  img_height: 360
+  title: Ready for your own content
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+  btn_primary: Start Building
+  btn_secondary: Back to Top
+  btn_primary_id: home
+  btn_secondary_id: home

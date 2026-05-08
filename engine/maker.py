@@ -9,6 +9,9 @@ Currently includes:
 
 import html
 import os
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 def generate_html(config, HEADER, content, FOOTER):
     """
@@ -38,12 +41,14 @@ def generate_html(config, HEADER, content, FOOTER):
     """
     return html_template
 
-def write_html(data):
+def write_html(data, output_file="index.html"):
     """
-    write output to /dist folder
+    Write output file to /dist folder.
     """
 
-    os.makedirs('dist', exist_ok=True)
-    file_path = os.path.join('dist', 'index.html')
+    dist_dir = PROJECT_ROOT / "dist"
+    os.makedirs(dist_dir, exist_ok=True)
+    file_path = dist_dir / output_file
+    file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, 'w') as file:
         file.write(data)

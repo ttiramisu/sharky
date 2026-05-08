@@ -1,0 +1,54 @@
+- block: scroll_to
+  id: contact-top
+
+- block: hero
+  type: text_left_img_right
+  img: web/assets/icon.jpg
+  img_width: 520
+  img_height: 320
+  title: Contact Lorem Ipsium
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  btn_primary: Contact Details
+  btn_secondary: Back to top
+  btn_primary_id: contact-details
+  btn_secondary_id: contact-top
+
+- block: spacing
+  value: 50
+
+- block: scroll_to
+  id: contact-details
+- block: jumbo
+  type: basic
+  title: Reach us
+  text: |
+    Email: hello@example.com
+    Phone: +00 1234 5678
+    Address: 123 Lorem Avenue, Ipsum City
+
+- block: spacing
+  value: 40
+
+- block: text_row
+  class: demo-pill
+  items:
+    - "Mon-Fri: 9:00 - 18:00"
+    - "Sat: 10:00 - 16:00"
+    - "Sun: Closed"
+
+- block: spacing
+  value: 60
+
+- block: hero
+  type: centered_hero
+  img: web/assets/icon.jpg
+  img_width: 160
+  img_height: 160
+  title: Thanks for visiting
+  text: |
+    Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+  btn_primary: Back to top
+  btn_secondary:
+  btn_primary_id: contact-top
+  btn_secondary_id:

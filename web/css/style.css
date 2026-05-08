@@ -1,0 +1,42 @@
+body {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 30%, #f8f9fa 100%);
+  color: #1d252c;
+}
+
+.navbar,
+footer {
+  backdrop-filter: blur(5px);
+}
+
+.demo-pill {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin: 0.5rem;
+  padding: 1.1rem 1rem;
+  font-weight: 600;
+}
+
+.demo-image img {
+  border-radius: 14px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.65;
+}
